@@ -1,0 +1,30 @@
+{
+  "log_level": "INFO",
+  "bind": "0.0.0.0:25565",
+  "compression_threshold": 1024,
+  "servers": {
+    "lobby": {
+      "server_id": "lobby",
+      "server_name": "Lobby",
+      "server_ip": "127.0.0.1",
+      "server_port": 25566
+    }
+  },
+  "try": ["lobby"],
+  "fallback": ["lobby"],
+  "auth": {
+    "force_key_authentication": true,
+    "default_forwarding": {
+      "auth_method": "velocity",
+      "auth_data": {
+        "secret_key": "test"
+      }
+    },
+    "incoming_auth": {
+      "auth_method": "mojang"
+    }
+  },
+  "status": {
+    "motd": "Umbrella"
+  }
+}
